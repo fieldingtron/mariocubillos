@@ -1,16 +1,311 @@
 ---
-
+import '/src/styles/global.css'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang='es' class='dark'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Mario Cubillos Abogados</title>
+  </head>
+  <body class='font-sans bg-gray-900 text-gray-100'>
+    <!-- Navbar -->
+    <nav class='bg-gray-800 shadow px-4 py-4'>
+      <div class='container mx-auto flex justify-between items-center'>
+        <a href='/' class='text-lg font-semibold text-white'
+          >Mario Cubillos Abogados</a
+        >
+
+        <!-- Mobile Menu Button -->
+        <button
+          id='menu-toggle'
+          class='md:hidden text-gray-400 focus:outline-none'
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+        >
+          ☰
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class='hidden md:flex space-x-4'>
+          <a href='#services' class='text-gray-300 hover:text-blue-400'
+            >Servicios</a
+          >
+          <a href='#practices' class='text-gray-300 hover:text-blue-400'
+            >Áreas Prácticas</a
+          >
+          <a href='#about' class='text-gray-300 hover:text-blue-400'>Nosotros</a
+          >
+          <a href='#contact' class='text-gray-300 hover:text-blue-400'
+            >Contacto</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id='mobile-menu' class='hidden md:hidden mt-4 space-y-2 text-center'>
+        <a href='#services' class='block text-gray-300 hover:text-blue-400'
+          >Servicios</a
+        >
+        <a href='#practices' class='block text-gray-300 hover:text-blue-400'
+          >Áreas Prácticas</a
+        >
+        <a href='#about' class='block text-gray-300 hover:text-blue-400'
+          >Nosotros</a
+        >
+        <a href='#contact' class='block text-gray-300 hover:text-blue-400'
+          >Contacto</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class='relative bg-cover bg-center h-screen'
+      style="background-image: url('/img/scales-of-justice.jpg');"
+    >
+      <div class='absolute inset-0 bg-black opacity-70'></div>
+      <div
+        class='relative z-10 flex items-center justify-center h-full px-4 text-white text-center'
+      >
+        <div>
+          <h1 class='text-4xl md:text-5xl font-bold mb-4'>
+            Bienvenido a Mario Cubillos Abogados
+          </h1>
+          <p class='text-lg md:text-xl mb-8'>
+            Especialistas en derecho laboral y civil.
+          </p>
+          <a href='#contact' class='bg-blue-500 px-4 py-2 rounded'
+            >Contáctenos</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id='services' class='py-16 bg-gray-900'>
+      <div class='container mx-auto px-4'>
+        <h2 class='text-3xl font-bold mb-8 text-center text-white'>
+          Nuestros Servicios
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div class='bg-gray-800 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Asesoría Legal
+            </h3>
+            <p class='text-gray-300'>
+              Brindamos asesoría legal integral en diversas áreas del derecho.
+            </p>
+          </div>
+          <div class='bg-gray-800 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Representación Judicial
+            </h3>
+            <p class='text-gray-300'>
+              Representamos a nuestros clientes en procesos judiciales con
+              profesionalismo y dedicación.
+            </p>
+          </div>
+          <div class='bg-gray-800 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Consultoría Empresarial
+            </h3>
+            <p class='text-gray-300'>
+              Ofrecemos consultoría para empresas en aspectos legales y
+              estratégicos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section id='practices' class='py-16 bg-gray-800'>
+      <div class='container mx-auto px-4'>
+        <h2 class='text-3xl font-bold mb-8 text-center text-white'>
+          Áreas Prácticas
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Recursos de Protección
+            </h3>
+            <p class='text-gray-300'>
+              Asesoría en defensa de derechos constitucionales.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Defensa del Consumidor
+            </h3>
+            <p class='text-gray-300'>
+              Protección y representación en casos de derechos del consumidor.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Accidentes de Tránsito
+            </h3>
+            <p class='text-gray-300'>
+              Orientación y representación en accidentes de tráfico.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Accidentes Laborales
+            </h3>
+            <p class='text-gray-300'>
+              Defensa de derechos en accidentes en el lugar de trabajo.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Negligencias Médicas
+            </h3>
+            <p class='text-gray-300'>
+              Representación en casos de prácticas médicas inapropiadas.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Indemnización de Perjuicios
+            </h3>
+            <p class='text-gray-300'>
+              Reclamos de compensación por daños sufridos.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>Arrendamiento</h3>
+            <p class='text-gray-300'>
+              Soluciones legales en contratos y conflictos de arrendamiento.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>Cobranza</h3>
+            <p class='text-gray-300'>Gestión y recuperación de deudas.</p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Derecho de Familia
+            </h3>
+            <p class='text-gray-300'>
+              Asesoría en casos de familia, incluyendo custodia y herencias.
+            </p>
+          </div>
+          <div class='bg-gray-700 p-6 rounded-lg shadow'>
+            <h3 class='text-xl font-semibold mb-4 text-white'>
+              Derecho Societario
+            </h3>
+            <p class='text-gray-300'>
+              Servicios en formación y regulación de sociedades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id='about' class='py-16 bg-gray-900'>
+      <div class='container mx-auto px-4'>
+        <h2 class='text-3xl font-bold mb-8 text-center text-white'>
+          Sobre Nosotros
+        </h2>
+        <div class='flex flex-col md:flex-row items-center'>
+          <div class='md:w-1/2 md:pr-8'>
+            <p class='text-gray-300 mb-4'>
+              En Mario Cubillos Abogados, brindamos un enfoque integrador de las
+              distintas disciplinas del derecho.
+            </p>
+            <p class='text-gray-300 mb-8'>
+              Nuestro compromiso es ofrecer soluciones legales efectivas y
+              personalizadas para cada uno de nuestros clientes.
+            </p>
+            <h3 class='text-xl font-semibold text-white mb-4'>
+              Enlaces Útiles
+            </h3>
+            <ul class='space-y-2'>
+              <li>
+                <a
+                  href='https://www.pjud.cl'
+                  target='_blank'
+                  class='text-blue-400 hover:underline'
+                  >Poder Judicial de Chile - www.pjud.cl</a
+                >
+              </li>
+              <li>
+                <a
+                  href='https://www.bcn.cl'
+                  target='_blank'
+                  class='text-blue-400 hover:underline'
+                  >Biblioteca del Congreso Nacional - www.bcn.cl</a
+                >
+              </li>
+              <li>
+                <a
+                  href='https://www.contraloria.cl'
+                  target='_blank'
+                  class='text-blue-400 hover:underline'
+                  >Contraloría General de la República - www.contraloria.cl</a
+                >
+              </li>
+              <li>
+                <a
+                  href='https://www.registrocivil.cl'
+                  target='_blank'
+                  class='text-blue-400 hover:underline'
+                  >Registro Civil e Identificación - www.registrocivil.cl</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class='md:w-1/2 mt-8 md:mt-0'>
+            <img
+              src='/img/courthouse-foto.jpg'
+              alt='Sobre Nosotros'
+              class='rounded-lg shadow'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id='contact' class='py-16 bg-gray-700'>
+      <div class='container mx-auto px-4'>
+        <h2 class='text-3xl font-bold mb-8 text-center text-white'>
+          Contáctenos
+        </h2>
+        <div class='text-center'>
+          <p class='text-lg text-blue-400'>
+            <a href='mailto:mariocubillos@gmail.com' class='hover:underline'
+              >mariocubillos@gmail.com</a
+            >
+          </p>
+          <p class='text-lg text-blue-400 mt-4'>
+            <a href='tel:+56994793834' class='hover:underline'
+              >+56 9 9479 3834</a
+            >
+          </p>
+          <div class='mt-8'>
+            <iframe
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3358.376108178818!2d-73.04863118481055!3d-36.8201351799404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966898f6cf35f60f%3A0x4b1a39d24d6a2b5f!2sConcepci%C3%B3n%2C%20Biob%C3%ADo%2C%20Chile!5e0!3m2!1sen!2sus!4v1699448355976!5m2!1sen!2sus'
+              width='600'
+              height='450'
+              style='border:0;'
+              allowfullscreen=''
+              loading='lazy'
+              referrerpolicy='no-referrer-when-downgrade'
+              class='w-full h-64 md:h-96 rounded-lg shadow'></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class='bg-gray-800 text-white py-4 text-center'>
+      <div class='container mx-auto px-4'>
+        &copy; 2024 Mario Cubillos Abogados
+      </div>
+    </footer>
+  </body>
 </html>
